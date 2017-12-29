@@ -101,7 +101,5 @@ public class MenuController {
         menuDao.save(theMenu);
 
         return "redirect:/menu/view/" + form.getMenuId();
-        //return "menu/Hello";
-
     }
 }
