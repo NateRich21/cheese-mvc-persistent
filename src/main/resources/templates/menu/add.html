@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<form th:object="${menu}" method="post">
+    <label th:for="name"></label>
+    <input name="name" class="form-control" th:field="*{name}" />
+    <span th:errors="*{name}" class="error" />
+</form>
+
+</body>
+</html>
